@@ -9,10 +9,10 @@ int bool = 1;
 void setup(){
   
  size(_width,_height);
-for(int i = 0;i < 10; i++){
- x[i] = 0;
- y[i] = 0;
-}
+ for(int i = 0;i < 10; i++){
+   x[i] = 0;
+   y[i] = 0;
+ }
 }
 
 
@@ -21,7 +21,8 @@ for(int i = 0;i < 10; i++){
 void draw(){
 
   background(0);
-PImage test = loadImage("test.png"); 
+  PImage test = loadImage("test.png"); 
+  
   for(int i = 0; i < 10; i++){
     image(test,x[i] + i *(sizexy),y[i],sizexy,sizexy);
     
@@ -32,13 +33,12 @@ PImage test = loadImage("test.png");
      bool = 0;
      for(int i = 0;i < 10; i++)
         y[i] += 30;      
-    }
+  }
  if(x[0] < 0){
      bool = 1;
      for(int i = 0;i < 10; i++)
         y[i] += 30;
-     
-    }
+  }
    if(y[0] > height - sizexy){
        for(int i = 0;i < 10; i++)
         y[i] = 0;
